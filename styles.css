@@ -7,7 +7,13 @@ body {
 
 header {
     background-color: #bababa;
+    margin-right:  15rem;
+    margin-left: 15rem;
+    margin-top: 2rem;
+    align-items: center;
     padding: 10px 0;
+    border-radius: 20px;
+    
 }
 
 nav ul {
@@ -16,6 +22,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
+    align-items:center ;
 }
 
 nav a {
@@ -56,13 +63,17 @@ p {
 
 button {
     background-color: #fff;
-    border: 2px solid #333;
+    border: #fff;
     padding: 10px 20px;
+    width: 549px;
+    height: 72px;
     font-size: 1em;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 20px;
     transition: background-color 0.3s, color 0.3s;
 }
+
+
 
 button:hover {
     background-color: #333;
