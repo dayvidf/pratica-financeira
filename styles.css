@@ -7,23 +7,24 @@ body {
 
 header {
     background-color: #bababa;
-    margin-right:  15rem;
+    margin-right: 15rem;
     margin-left: 15rem;
     margin-top: 2rem;
-    align-items: center;
     padding: 10px 0;
-    border-radius: 20px;
-    
-}
-
-nav ul {
+    border-radius: 0.8rem;
+  }
+  
+  nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center;
     gap: 20px;
-    align-items:center ;
-}
+    align-items: center;
+  }
+  
+  li:last-child {
+    margin-left: auto;
+  }
 
 nav a {
     text-decoration: none;
