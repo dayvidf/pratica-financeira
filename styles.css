@@ -1,16 +1,25 @@
+:root {
+    --cor-primaria: #d9d9d9;
+    --cor-secundaria: #bababa;
+    --cor-tercearia: #333;
+    --cor-quaternaria: #fff;
+    --cor-hover: #7e7e7e;
+    --font-primaria: Inter, sans-serif;
+}
+
 body {
-    font-family: Inter, sans-serif;
-    background-color: #d9d9d9;
+    font-family: var(--font-primaria);
+    background-color: var(--cor-primaria);
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #bababa;
+    background-color: var(--cor-secundaria);
     margin-right: 15rem;
     margin-left: 15rem;
     margin-top: 2rem;
-    padding: 10px 0;
+    padding: 10px 5px;
     border-radius: 0.8rem;
   }
   
@@ -28,21 +37,27 @@ header {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--cor-tercearia);
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 nav a:hover {
-    background-color: #7e7e7e;
-    color: #fff;
+    background-color: var(--cor-hover);
+    color: var(--cor-quaternaria);
 }
 
-main {
+.main {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 50px 20px;
+}
+
+.main-one {
+    display: flex;
+    justify-content: space-around;
     padding: 50px 20px;
 }
 
@@ -50,9 +65,19 @@ main {
     max-width: 500px;
 }
 
-h1 {
+.content-one {
+    max-width: 700px;
+}
+
+.title-one {
     font-size: 3em;
     font-weight: bold;
+    line-height: 1.2;
+}
+
+.title-two {
+    font-size: 2em;
+    font-weight: 500;
     line-height: 1.2;
 }
 
@@ -63,8 +88,8 @@ p {
 }
 
 button {
-    background-color: #fff;
-    border: #fff;
+    background-color: var(--cor-quaternaria);
+    border: var(--cor-quaternaria);
     padding: 10px 20px;
     width: 549px;
     height: 72px;
@@ -77,8 +102,8 @@ button {
 
 
 button:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--cor-tercearia);
+    color: var(--cor-quaternaria);
 }
 
 .image-placeholder {
@@ -97,7 +122,7 @@ button:hover {
     content: '';
     width: 50px;
     height: 50px;
-    background-color: #7e7e7e;
+    background-color: var(--cor-hover);
     position: absolute;
 }
 
@@ -107,6 +132,36 @@ button:hover {
 }
 
 .image-placeholder::after {
+    bottom: -20px;
+    right: -20px;
+}
+
+.image-placeholder-one {
+    width: 360px;
+    height: 500px;
+    background-color: #b1b1b1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-placeholder-one::before,
+.image-placeholder-one::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: var(--cor-hover);
+    position: absolute;
+}
+
+.image-placeholder-one::before {
+    top: -20px;
+    left: -20px;
+}
+
+.image-placeholder-one::after {
     bottom: -20px;
     right: -20px;
 }
