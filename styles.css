@@ -1,5 +1,5 @@
 :root {
-    --cor-primaria: #d9d9d9;
+    --cor-primaria: #ABCFF3;
     --cor-secundaria: #bababa;
     --cor-tercearia: #333;
     --cor-quaternaria: #fff;
@@ -7,33 +7,49 @@
     --font-primaria: Inter, sans-serif;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 body {
     font-family: var(--font-primaria);
     background-color: var(--cor-primaria);
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 15px;
 }
 
 header {
-    background-color: var(--cor-secundaria);
-    margin-right: 15rem;
-    margin-left: 15rem;
-    margin-top: 2rem;
-    padding: 10px 5px;
-    border-radius: 0.8rem;
-  }
-  
-  nav ul {
+    background-color: #fff;
+    padding: 1px 10px;
+    border-radius: 1.25rem;
+}
+
+main {
+    flex: 1;
+}
+
+nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
     gap: 20px;
     align-items: center;
-  }
-  
-  li:last-child {
+}
+
+li:last-child {
     margin-left: auto;
-  }
+}
 
 nav a {
     text-decoration: none;
@@ -50,19 +66,20 @@ nav a:hover {
 
 .main {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 50px 20px;
+    padding: 50px 10px;
 }
 
 .main-one {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 50px 20px;
 }
 
 .content {
-    max-width: 500px;
+    max-width: 400px;
+    text-align: justify;
 }
 
 .content-one {
@@ -70,9 +87,11 @@ nav a:hover {
 }
 
 .title-one {
-    font-size: 3em;
-    font-weight: bold;
+    font-family: VT323, monospace;
+    font-size: 6em;
+    font-weight: normal;
     line-height: 1.2;
+    margin-bottom: 10px;
 }
 
 .title-two {
@@ -87,23 +106,30 @@ p {
     margin: 20px 0;
 }
 
-button {
+.registro {
     background-color: var(--cor-quaternaria);
     border: var(--cor-quaternaria);
-    padding: 10px 20px;
-    width: 549px;
-    height: 72px;
+    width: 400px;
+    height: 50px;
     font-size: 1em;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 20px;
     transition: background-color 0.3s, color 0.3s;
 }
 
+.registro a {
+    text-decoration: none;
+    color: #000;
+}
 
-
-button:hover {
+.registro:hover {
     background-color: var(--cor-tercearia);
-    color: var(--cor-quaternaria);
+    color: #fff;
+}
+
+.registro a:hover {
+    color: #fff;
 }
 
 .image-placeholder {
@@ -129,16 +155,18 @@ button:hover {
 .image-placeholder::before {
     top: -20px;
     left: -20px;
+    border-radius: 4px;
 }
 
 .image-placeholder::after {
     bottom: -20px;
     right: -20px;
+    border-radius: 4px;
 }
 
 .image-placeholder-one {
     width: 360px;
-    height: 500px;
+    height: 409px;
     background-color: #b1b1b1;
     border-radius: 10px;
     display: flex;
@@ -159,9 +187,76 @@ button:hover {
 .image-placeholder-one::before {
     top: -20px;
     left: -20px;
+    border-radius: 4px;
 }
 
 .image-placeholder-one::after {
     bottom: -20px;
     right: -20px;
+    border-radius: 4px;
+}
+
+.input_grup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 5px;
+    gap: 20px;
+}
+
+.input_box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input_box input {
+    background-color: #FFF;
+    border-radius: 10px;
+    border: 0.5px solid #CACACA;
+    width: 656px;
+    height: 65px;
+    text-indent: 32px;
+}
+
+.input_box label {
+    font-family: var(--font-primaria);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.cadastrar {
+    background-color: var(--cor-quaternaria);
+    border: var(--cor-quaternaria);
+    padding: 10px 20px;
+    width: 549px;
+    height: 72px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button_cadastro {
+    display: flex;
+    justify-content: center;
+}
+
+.cadastro_a {
+    text-decoration: none;
+    font-family: var(--font-primaria);
+    color: #000;
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
 }
