@@ -11,13 +11,12 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow-x: hidden;
 }
 
 body {
     font-family: var(--font-primaria);
     background-color: var(--cor-primaria);
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -25,18 +24,27 @@ body {
 
 .container {
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 0 auto;
     padding: 0 15px;
+    height: 100%;
 }
 
 header {
     background-color: #fff;
     padding: 1px 10px;
     border-radius: 1.25rem;
+    margin-top:20px;
+}
+.header-cadastro{
+    align-items:left;
+    margin-left:100px;
 }
 
 main {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 nav ul {
@@ -68,6 +76,7 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex: 1; 
     padding: 50px 10px;
 }
 
@@ -75,6 +84,7 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     padding: 50px 20px;
+    margin-top: 50px; 
 }
 
 .content {
@@ -108,7 +118,7 @@ p {
 
 .registro {
     background-color: var(--cor-quaternaria);
-    border: var(--cor-quaternaria);
+    border: none;
     width: 400px;
     height: 50px;
     font-size: 1em;
@@ -254,6 +264,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: end;
+    padding: 20px;
 }
 
 footer p {
