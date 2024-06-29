@@ -11,7 +11,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow-x: hidden;
+    
 }
 
 body {
@@ -90,10 +90,12 @@ nav a:hover {
 .content {
     max-width: 400px;
     text-align: justify;
+    margin-right: 5rem;
+
 }
 
 .content-one {
-    max-width: 700px;
+    max-width:450px;
 }
 
 .title-one {
@@ -265,9 +267,43 @@ footer {
     justify-content: center;
     align-items: end;
     padding: 20px;
+    margin-top:  10rem;
 }
 
 footer p {
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px; 
+    }
+
+    .main, .main-one {
+        flex-direction: column; 
+        padding: 30px 10px; 
+    }
+
+    .content, .content-one {
+        max-width: 100%; 
+        margin-right: 0; 
+        text-align: center; 
+    }
+    
+    .image-placeholder, .image-placeholder-one {
+        width: 100%;
+        height: auto; 
+        margin-bottom: 20px; 
+        margin-top: 1rem;
+    }
+
+    .registro {
+        width: 100%; 
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        margin-top: 19rem; 
+    }
 }
