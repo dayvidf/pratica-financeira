@@ -15,25 +15,25 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="#">Gameplay</a></li>
-                    <li><a href="./cadastro.html">Cadastro</a></li>
-                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="#content">Home</a></li>
+                    <li><a href="#content-one">Gameplay</a></li>
+                    <li><a href="#" id="openCadastro">Cadastro</a></li>
+                    <li><a href="#" id="openLogin">Login</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <div class="main">
+            <div class="main" id="content">
                 <section class="content">
                     <h1 class="title-one">FlapMoney</h1>
                     <p>FlapMoney é um jogo estilo Flappy Bird que oferece uma experiência divertida e educativa sobre gestão financeira. No jogo, você controla uma carteira que deve evitar obstáculos que representam despesas inesperadas, dívidas e outros fatores que podem prejudicar sua saúde financeira. O objetivo é manter a carteira saudável e coletar moedas que simbolizam boas práticas financeiras.</p>
-                    <button onclick="location.href='./cadastro.html';" class="registro">CADASTRE-SE</button>
+                    <button id="openCadastro" class="registro">CADASTRE-SE</button>
                 </section>
                 <section class="image">
                     <div class="image-placeholder"><img class="image-placeholder" src="../imagens/Captura de tela 2024-06-25 144621.png" alt=""></div>
                 </section>
             </div>
-            <div class="main-one">
+            <div class="main-one" id="content-one">
                 <section class="content-one">
                     <h1 class="title-two">CUIDE DO SEU DINHEIRO!</h1>
                     <p>Cuidado com o Tigrinho: ele pode parecer inofensivo no início, mas sua caçada pode te levar a grandes arrependimentos. Os bancos existem para ajudar, mas nem tudo são flores; esteja atento às armadilhas financeiras disfarçadas de oportunidades.</p>
@@ -56,5 +56,44 @@
             </div>
         </footer>
     </div>
+
+    <!-- Pop-up de Cadastro -->
+    <div id="cadastroPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Cadastro</h2>
+            <form id="cadastroForm">
+                <label for="username">Nome de usuário:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="age">Idade:</label>
+                <input type="number" id="age" name="age" required>
+                
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Pop-up de Login -->
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Digite seu usuário:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+                
+                <label for="loginPassword">Digite sua senha:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
